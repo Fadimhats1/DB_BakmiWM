@@ -81,8 +81,8 @@ INSERT INTO SouvenirTranDetail VALUES --27 data
 ('ST005', 'SO007', 2),
 ('ST006', 'SO008', 2),
 ('ST006', 'SO009', 5),
-('ST007', 'SO010', 3),
-('ST007', 'SO007', 1),
+('ST007', 'SO010', 7),
+('ST007', 'SO007', 6),
 ('ST008', 'SO005', 1),
 ('ST008', 'SO002', 2),
 ('ST009', 'SO003', 3),
@@ -90,7 +90,7 @@ INSERT INTO SouvenirTranDetail VALUES --27 data
 ('ST010', 'SO010', 2),
 ('ST010', 'SO009', 5),
 ('ST011', 'SO004', 3),
-('ST012', 'SO008', 2),
+('ST012', 'SO008', 6),
 ('ST013', 'SO004', 1),
 ('ST014', 'SO001', 3),
 ('ST015', 'SO004', 2),
@@ -111,13 +111,14 @@ INSERT INTO Menu VALUES --10 data
 ('ME001', 'Bakmi Ayam', 20000, 'MC001'),
 ('ME002', 'Nasi Goreng', 18000, 'MC001'),
 ('ME003', 'Mie Goreng', 18000, 'MC001'),
-('ME004', 'Telur', 3000, 'MC004'),
-('ME005', 'Jamur', 8000, 'MC004'),
-('ME006', 'Bakso', 5000, 'MC004'),
-('ME007', 'Es Buah', 15000, 'MC002'),
-('ME008', 'Air Mineral', 5000, 'MC003'),
-('ME009', 'Teh Manis', 8000, 'MC003'),
-('ME010', 'Teh Tawar', 8000, 'MC003')
+('ME004', 'Bakmi Ayam Spesial', 27000, 'MC001'),
+('ME005', 'Telur', 3000, 'MC004'),
+('ME006', 'Jamur', 8000, 'MC004'),
+('ME007', 'Bakso', 5000, 'MC004'),
+('ME008', 'Es Buah', 15000, 'MC002'),
+('ME009', 'Air Mineral', 5000, 'MC003'),
+('ME010', 'Teh Manis', 8000, 'MC003'),
+('ME011', 'Teh Tawar', 8000, 'MC003')
 
 
 INSERT INTO MenuTransaction VALUES --15 data

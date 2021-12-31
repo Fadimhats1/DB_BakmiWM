@@ -1,6 +1,8 @@
 USE BakmiWM
 
--- 1. Simulasi ketika pelanggan baru ingin memesan menu makanan
+USE master
+
+-- 1. Simulasi ketika pelanggan baru ingin memesan souvenir
 -- Pertama - tama pelanggan harus mendaftarkan diri terlebih dahulu
 
 BEGIN TRAN
@@ -10,33 +12,31 @@ INSERT INTO Customer VALUES ('CU011', 'Thomas Miles', 'Male', '083572618263', 't
 ROLLBACK
 COMMIT
 
-SELECT * FROM MenuTranDetail
+-- Lalu ketika pelanggan telah mendaftarkan diri, pelanggan akan memilih souvenir, disini pelanggan akan memilih 3 item
 
--- Lalu ketika pelanggan telah mendaftarkan diri, pelanggan akan memilih menu, disini pelanggan akan memilih 3 menu
+SELECT * FROM Souvenir
 
 BEGIN TRAN
 
-INSERT INTO MenuTransaction VALUES ('MT016', 'SF002', 'CU011', '2021-12-31')
+INSERT INTO SouvenirTransaction VALUES ('ST017', 'SF008', 'CU011', '2021-12-31')
 
-INSERT INTO MenuTranDetail VALUES 
-('MT016', 'ME004', 4),
-('MT016', 'ME002', 1),
-('MT016', 'ME003', 2)
+INSERT INTO SouvenirTranDetail VALUES 
+('ST017', 'SO004', 4),
+('ST017', 'SO002', 1)
 
 ROLLBACK
 COMMIT
 
--- 2. Simulasi ketika pelanggan yang sudah terdaftar ingin memesan souvenir
+-- 2. Simulasi ketika pelanggan yang sudah terdaftar ingin memesan Menu makanan
 
 BEGIN TRAN
 
-INSERT INTO SouvenirTransaction VALUES ('ST017', 'SF008', 'CU008', '2021-12-31')
+INSERT INTO MenuTransaction VALUES ('MT016', 'SF008', 'CU008', '2021-12-30')
 
-INSERT INTO SouvenirTranDetail VALUES 
-('ST017', 'SO004', 4),
-('ST017', 'SO008', 5),
-('ST017', 'SO001', 3),
-('ST017', 'SO009', 2)
+INSERT INTO MenuTranDetail VALUES
+('MT016', 'ME004', 4),
+('MT016', 'ME010', 2),
+('MT016', 'ME011', 3)
 
 ROLLBACK
 COMMIT
@@ -45,11 +45,10 @@ COMMIT
 
 UPDATE SouvenirTranDetail SET Qty = 3 WHERE SouvenirTranID LIKE 'ST016' AND SouvenirID LIKE 'SO002'
 
--- 4. Simulasi ketika ingin menghapus karyawan yang sebelum nya terdaftar
-
+-- 4. Simulasi ketika ingin menghapus karyawan yang sebelum nya keluar
 BEGIN TRAN
 
-DELETE Staff WHERE StaffID LIKE 'SF005'
+DELETE FROM Staff WHERE StaffID LIKE 'SF005'
 
 ROLLBACK
 COMMIT
