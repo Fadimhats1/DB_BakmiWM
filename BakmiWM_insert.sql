@@ -1,6 +1,6 @@
 USE BakmiWM
 
-INSERT INTO Position VALUES
+INSERT INTO Position VALUES --7 data
 ('SP001', 'Chairman'),
 ('SP002', 'Director'),
 ('SP003', 'Assistant Manager'),
@@ -11,7 +11,6 @@ INSERT INTO Position VALUES
 ('SP008', 'Chef'),
 ('SP009', 'Waiter'),
 ('SP010', 'Dishwasher')
-
 
 INSERT INTO Staff VALUES --10 data
 ('SF001', 'Jason Drewson', 'Male', '1991-1-21', '081234567890', 'jason121@gmail.com', 'Jalan Anggrek no. 2', 25000000, 'SP001'),
@@ -25,7 +24,6 @@ INSERT INTO Staff VALUES --10 data
 ('SF009', 'Dani Carlin', 'Male', '2001-2-3', '081738492875', 'dani2dani@gmail.com', 'Jalan Kamboja no. 123', 2500000, 'SP007'),
 ('SF010', 'Dian Carlin', 'Female', '2001-2-3', '081244953957', 'dian3dian@gmail.com', 'Jalan Kamboja no. 123', 2000000, 'SP009')
 
-
 INSERT INTO Customer VALUES --10 data
 ('CU001', 'Anna Martin', 'Female', '081732384283', 'annana@gmail.com', 'Jalan Anggur no. 85'),
 ('CU002', 'Sean Matthew', 'Male', '082347582949', 'seanm12@gmail.com', 'Jalan Jeruk no. 53'),
@@ -38,7 +36,6 @@ INSERT INTO Customer VALUES --10 data
 ('CU009', 'Clarin Maria', 'Female', '087846373736', 'clalalarin@gmail.com', 'Jalan Ahmad Yani no. 17'),
 ('CU010', 'Felix Lee', 'Male', '081123443225', 'lixfelix@gmail.com', 'Jalan Sultan Hasanuddin no. 105')
 
-
 INSERT INTO Souvenir VALUES --10 data
 ('SO001', 'Sendok Garpu Travel Set', 15000, 20000),
 ('SO002', 'Sumpit Stainless Steel', 12000, 15000),
@@ -50,7 +47,6 @@ INSERT INTO Souvenir VALUES --10 data
 ('SO008', 'Pouch Mini', 10000, 15000),
 ('SO009', 'Masker Kain', 8000, 10000),
 ('SO010', 'Scented Candle', 30000, 35000)
-
 
 INSERT INTO SouvenirTransaction VALUES --16 data
 ('ST001', 'SF001', 'CU001', '2021-1-20'),
@@ -99,18 +95,16 @@ INSERT INTO SouvenirTranDetail VALUES --27 data
 ('ST016', 'SO002', 1),
 ('ST016', 'SO008', 4)
 
-
-INSERT INTO MenuCategory VALUES -- 4 data
+INSERT INTO MenuCategory VALUES --4 data
 ('MC001', 'Food'),
 ('MC002', 'Dessert'),
 ('MC003', 'Beverage'),
 ('MC004', 'Topping')
 
-
-INSERT INTO Menu VALUES --10 data
+INSERT INTO Menu VALUES --11 data
 ('ME001', 'Bakmi Ayam', 20000, 'MC001'),
-('ME002', 'Nasi Goreng', 18000, 'MC001'),
-('ME003', 'Mie Goreng', 18000, 'MC001'),
+('ME002', 'Nasi Goreng', 28000, 'MC001'),
+('ME003', 'Mie Goreng', 22000, 'MC001'),
 ('ME004', 'Bakmi Ayam Spesial', 27000, 'MC001'),
 ('ME005', 'Telur', 3000, 'MC004'),
 ('ME006', 'Jamur', 8000, 'MC004'),
@@ -119,7 +113,6 @@ INSERT INTO Menu VALUES --10 data
 ('ME009', 'Air Mineral', 5000, 'MC003'),
 ('ME010', 'Teh Manis', 8000, 'MC003'),
 ('ME011', 'Teh Tawar', 8000, 'MC003')
-
 
 INSERT INTO MenuTransaction VALUES --15 data
 ('MT001', 'SF001', 'CU001', '2021-1-11'),
@@ -138,11 +131,10 @@ INSERT INTO MenuTransaction VALUES --15 data
 ('MT014', 'SF002', 'CU008', '2021-10-9'),
 ('MT015', 'SF001', 'CU003', '2021-11-27')
 
-
 INSERT INTO MenuTranDetail VALUES --25 data
 ('MT001', 'ME001', 2),
-('MT001', 'ME004', 2),
-('MT001', 'ME005', 2),
+('MT002', 'ME004', 2),
+('MT002', 'ME005', 2),
 ('MT003', 'ME002', 3),
 ('MT004', 'ME003', 4),
 ('MT004', 'ME009', 4),
