@@ -69,7 +69,7 @@ WHERE
 GROUP BY
 	st.SouvenirTranID, 
 	StaffName
-
+	
 --5
 SELECT
 	st.SouvenirTranID,
@@ -208,8 +208,6 @@ GROUP BY
 HAVING
 	MAX(Qty) != MIN(Qty)
 
-SELECT * FROM CustomerMenuPurchaseViewer
-
 --10
 CREATE VIEW StaffSouvenirSellingViewer AS
 SELECT
@@ -232,5 +230,3 @@ GROUP BY
 	StaffAddress
 HAVING 
 	MIN(Qty) > 5
-
-SELECT * FROM StaffSouvenirSellingViewer
